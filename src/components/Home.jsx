@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import HomeHero from "./HomeHero";
+import Category from "./Category";
 
 const Home = () => {
   const jobs = useLoaderData();
@@ -27,7 +28,13 @@ const Home = () => {
           Explore thousands of job opportunities with all the information you
           need. Its your future
         </p>
+        <div className="my-container grid md:grid-cols-2 gap-7 lg:grid-cols-4">
+          {categorys.map((category) => (
+            <Category key={category.id} category={category}></Category>
+          ))}
+        </div>
       </div>
+      {/* Featured Jobs section */}
     </div>
   );
 };
