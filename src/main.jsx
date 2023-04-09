@@ -17,7 +17,6 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
         loader: async () => await fetch("featuredJob.json"),
-        loader: async () => await fetch("jobs.json"),
       },
       {
         path: "blog",
