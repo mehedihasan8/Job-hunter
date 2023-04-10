@@ -122,7 +122,7 @@ const Header = () => {
               </div>
             )}
           </div>
-          <button className="btn">Star Applying</button>
+          <button className="btnB ">Star Applying</button>
         </div>
       </div>
     </div>

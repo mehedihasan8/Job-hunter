@@ -18,7 +18,7 @@ const AppliedJobs = () => {
     }
     setJobData(savedCart);
   }, [datas]);
-  console.log(jobData);
+
   return (
     <div className="my-container">
       <h1 className="text-3xl text-center mb-5 font-bold">Applied Jobs </h1>
@@ -36,10 +36,10 @@ const AppliedJobs = () => {
             className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a>Item 1</a>
+              <a>Remote</a>
             </li>
             <li>
-              <a>Item 2</a>
+              <a>OnSide</a>
             </li>
           </ul>
         </div>

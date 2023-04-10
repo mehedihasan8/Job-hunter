@@ -7,7 +7,11 @@ import Job from "./Job";
 
 const Home = () => {
   const jobs = useLoaderData();
-
+  const [cutJobs, setCutjobs] = useState([]);
+  useEffect(() => {
+    const cutting = jobs.slice(4);
+    setCutjobs(cutting);
+  }, []);
   const [categorys, setCategorys] = useState([]);
 
   useEffect(() => {
@@ -15,6 +19,10 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => setCategorys(data));
   }, []);
+
+  const showAllData = () => {
+    setCutjobs(jobs);
+  };
   return (
     <div>
       {/* Hero section */}
@@ -46,10 +54,15 @@ const Home = () => {
           need. Its your future
         </p>
         <div className="my-container grid lg:grid-cols-2 gap-6">
-          {jobs.map((job) => (
+          {cutJobs.map((job) => (
             <Job key={job.id} job={job}></Job>
           ))}
         </div>
+      </div>
+      <div className="text-center">
+        <button onClick={showAllData} className="btn">
+          See More
+        </button>
       </div>
     </div>
   );

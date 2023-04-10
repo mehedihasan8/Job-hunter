@@ -9,10 +9,12 @@ import Blog from "./components/Blog";
 import Statistics from "./components/Statistics";
 import AppliedJobs from "./components/AppliedJobs";
 import JobDetail from "./components/JobDetail";
+import NotFounde from "./components/NotFounde";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
+    errorElement: <NotFounde></NotFounde>,
     children: [
       {
         path: "/",
