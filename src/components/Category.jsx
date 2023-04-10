@@ -1,8 +1,6 @@
 import React from "react";
 
 const Category = ({ category }) => {
-  // const [img] = category;
-  console.log(category);
   return (
     <div className="bg-gray-100 shadow-lg rounded-lg p-8">
       <img

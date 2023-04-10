@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import HomeHero from "./HomeHero";
 import Category from "./Category";
-import { key } from "localforage";
+
 import Job from "./Job";
 
 const Home = () => {
   const jobs = useLoaderData();
-  // console.log(jobs);
+
   const [categorys, setCategorys] = useState([]);
 
   useEffect(() => {

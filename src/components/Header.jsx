@@ -23,6 +23,14 @@ const Header = () => {
           <ul className="items-center hidden space-x-8 lg:flex">
             <li>
               <NavLink
+                to="/"
+                className={({ isActive }) => (isActive ? "active" : "default")}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
                 to="/statistics"
                 className={({ isActive }) => (isActive ? "active" : "default")}
               >
@@ -82,6 +90,11 @@ const Header = () => {
                   {/* Mobile Nav Items Section */}
                   <nav>
                     <ul className="space-y-4">
+                      <li>
+                        <Link to="/" className="default">
+                          Home
+                        </Link>
+                      </li>
                       <li>
                         <Link to="/statistics" className="default">
                           Statistics
