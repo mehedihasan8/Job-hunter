@@ -5,6 +5,7 @@ import {
   MapPinIcon,
   CurrencyDollarIcon,
 } from "@heroicons/react/24/solid";
+import { addToDb } from "../utilitis/fake";
 
 const JobDetail = () => {
   const jobId = useParams();
@@ -21,7 +22,11 @@ const JobDetail = () => {
     phone,
     email,
     jobLocation,
+    id,
   } = findData;
+  const handelApplayJobs = (id) => {
+    addToDb(id);
+  };
   return (
     <div className="my-container text-gray-800">
       <h1 className="text-3xl text-center mb-5 font-bold">Job Details</h1>
@@ -82,7 +87,10 @@ const JobDetail = () => {
             </div>
           </div>
           <button className="btn mt-5 w-full">
-            <Link className="px-28 md:px-24" to="/">
+            <Link
+              onClick={() => handelApplayJobs(id)}
+              className="px-28 md:px-24"
+            >
               Apply Now
             </Link>
           </button>
