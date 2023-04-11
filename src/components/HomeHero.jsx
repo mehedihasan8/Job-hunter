@@ -27,7 +27,7 @@ const HomeHero = () => {
 
         <div className="md:w-2/3 lg:w-1/2">
           <div>
-            <img src="/public/assets/All Images/P3OLGJ1 copy 1.png" alt="" />
+            <img src="/assets/All-Images/hero.png" alt="" />
           </div>
         </div>
       </div>

@@ -90,6 +90,7 @@ const JobDetail = () => {
             <Link
               onClick={() => handelApplayJobs(id)}
               className="px-28 md:px-24"
+              to="/appliedjob"
             >
               Apply Now
             </Link>

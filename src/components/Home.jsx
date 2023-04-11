@@ -9,7 +9,7 @@ const Home = () => {
   const jobs = useLoaderData();
   const [cutJobs, setCutjobs] = useState([]);
   useEffect(() => {
-    const cutting = jobs.slice(4);
+    const cutting = jobs.slice(0, 4);
     setCutjobs(cutting);
   }, []);
   const [categorys, setCategorys] = useState([]);
@@ -34,7 +34,7 @@ const Home = () => {
         <h1 className="text-center text-4xl font-bold mt-14 mb-2 font-mono">
           Job Category List
         </h1>
-        <p className="text-center text-xl my-2">
+        <p className="px-10 text-center text-xl my-2">
           Explore thousands of job opportunities with all the information you
           need. Its your future
         </p>
@@ -49,7 +49,7 @@ const Home = () => {
         <h1 className="text-center text-4xl font-bold mt-3 mb-2 font-mono">
           Featured Jobs
         </h1>
-        <p className="text-center text-xl my-2">
+        <p className="px-10 text-center text-xl my-2">
           Explore thousands of job opportunities with all the information you
           need. Its your future
         </p>
