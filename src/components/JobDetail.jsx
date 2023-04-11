@@ -33,19 +33,25 @@ const JobDetail = () => {
       <div className="md:flex items-center justify-between">
         <div className="md:w-2/4">
           <p className="text-gray-800 my-6">
-            <span className="font-semibold">Job Description</span>:{" "}
-            {jobDescription}
+            <span className="font-semibold  text-xl    ">Job Description</span>{" "}
+            :{jobDescription}
           </p>
           <p className="text-gray-800 my-6">
-            <span className="font-semibold">Job Responsibility</span>:{" "}
-            {jobResponsibility}
+            <span className="font-semibold  text-xl    ">
+              Job Responsibility
+            </span>{" "}
+            :{jobResponsibility}
           </p>
           <p className="text-gray-800 my-6">
-            <span className="font-semibold">Educational Requirements</span>:{" "}
+            <span className="font-semibold  text-xl    ">
+              Educational Requirements
+            </span>{" "}
+            :
             <br /> {educationalRequirements}
           </p>
           <p className="text-gray-800 my-6">
-            <span className="font-semibold">Experiences</span>: <br />{" "}
+            <span className="font-semibold  text-xl    ">Experiences</span>:{" "}
+            <br />
             {experiences}
           </p>
         </div>
@@ -86,15 +92,9 @@ const JobDetail = () => {
               </p>
             </div>
           </div>
-          <button className="btn mt-5 w-full">
-            <Link
-              onClick={() => handelApplayJobs(id)}
-              className="px-28 md:px-24"
-              to="/appliedjob"
-            >
-              Apply Now
-            </Link>
-          </button>
+          <Link onClick={() => handelApplayJobs(id)} to="/appliedjob">
+            <button className="btn mt-5 w-full"> Apply Now</button>
+          </Link>
         </div>
       </div>
     </div>

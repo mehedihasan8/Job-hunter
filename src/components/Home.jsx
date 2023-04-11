@@ -8,9 +8,11 @@ import Job from "./Job";
 const Home = () => {
   const jobs = useLoaderData();
   const [cutJobs, setCutjobs] = useState([]);
+  const [btnShow, setBtnShow] = useState(false);
   useEffect(() => {
     const cutting = jobs.slice(0, 4);
     setCutjobs(cutting);
+    setBtnShow(true);
   }, []);
   const [categorys, setCategorys] = useState([]);
 
@@ -22,6 +24,7 @@ const Home = () => {
 
   const showAllData = () => {
     setCutjobs(jobs);
+    setBtnShow(false);
   };
   return (
     <div>
@@ -60,7 +63,7 @@ const Home = () => {
         </div>
       </div>
       <div className="text-center">
-        <button onClick={showAllData} className="btn">
+        <button onClick={showAllData} className={btnShow ? "btn" : "hidden"}>
           See More
         </button>
       </div>

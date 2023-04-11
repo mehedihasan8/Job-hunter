@@ -3,7 +3,7 @@ import { Link, useRouteError } from "react-router-dom";
 import { ExclamationCircleIcon } from "@heroicons/react/24/solid";
 const NotFounde = () => {
   const { error, status } = useRouteError();
-  console.log(error.message);
+
   return (
     <div className="bg-black h-screen w-screen flex justify-center items-center">
       <div>

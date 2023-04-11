@@ -6,7 +6,9 @@ import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
 const AppliedJobs = () => {
   const datas = useLoaderData();
+  const [findData, setFindData] = useState([]);
   const [jobData, setJobData] = useState([]);
+  console.log(jobData);
   useEffect(() => {
     const strodeData = getShoppingCart();
     let savedCart = [];
@@ -17,7 +19,22 @@ const AppliedJobs = () => {
       }
     }
     setJobData(savedCart);
+    setFindData(savedCart);
   }, [datas]);
+
+  const handelRemoteJob = () => {
+    const filterJobRemote = findData.filter(
+      (data) => data.remoteOrOnsite === "Remote"
+    );
+    setJobData(filterJobRemote);
+  };
+
+  const handelOnSideJob = () => {
+    const filterJobOnsite = findData.filter(
+      (data) => data.remoteOrOnsite === "Onsite"
+    );
+    setJobData(filterJobOnsite);
+  };
 
   return (
     <div className="my-container">
@@ -36,10 +53,10 @@ const AppliedJobs = () => {
             className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a>Remote</a>
+              <a onClick={handelRemoteJob}>See Remote job</a>
             </li>
             <li>
-              <a>OnSide</a>
+              <a onClick={handelOnSideJob}>See OnSide job</a>
             </li>
           </ul>
         </div>
