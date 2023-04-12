@@ -23,7 +23,7 @@ const Job = ({ job }) => {
         </p>
         <p className="inline-flex ">
           <CurrencyDollarIcon className="h-6 w-6 text-black" />
-          {job.salary}
+          <span>Salary : {job.salary}</span>
         </p>
       </div>
       <Link to={`/job/${job.id}`}>

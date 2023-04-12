@@ -64,7 +64,7 @@ const Home = () => {
       </div>
       <div className="text-center">
         <button onClick={showAllData} className={btnShow ? "btn" : "hidden"}>
-          See More
+          See All Jobs
         </button>
       </div>
     </div>

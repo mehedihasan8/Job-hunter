@@ -1,14 +1,9 @@
 import React from "react";
 import {
-  ComposedChart,
-  Line,
-  Bar,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
-  LineChart,
   AreaChart,
   Area,
 } from "recharts";
@@ -27,7 +22,7 @@ const Statistics = () => {
     <div className="mt-12">
       <AreaChart
         width={1000}
-        height={400}
+        height={500}
         data={assignments}
         margin={{
           top: 10,
@@ -40,7 +35,7 @@ const Statistics = () => {
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />
-        <Area type="monotone" dataKey="mark" stroke="#8884d8" fill="#8884d8" />
+        <Area type="monotone" dataKey="mark" stroke="#8884d8" fill="#71b8eb" />
       </AreaChart>
     </div>
   );

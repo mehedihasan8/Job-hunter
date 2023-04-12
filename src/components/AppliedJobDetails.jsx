@@ -37,7 +37,7 @@ const AppliedJobDetails = ({ singleJob }) => {
             </p>
             <p className="inline-flex ">
               <CurrencyDollarIcon className="h-6 w-6 text-black" />
-              {salary}
+              <span> Salary : {salary}</span>
             </p>
           </div>
         </div>
