@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import {
-  BoltIcon,
-  Bars3BottomRightIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/solid";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,8 +10,8 @@ const Header = () => {
         <div className="relative flex items-center justify-between">
           {/* Logo Section */}
           <Link to="/" className="">
-            <span className="ml-2 text-xl sm:text-2xl  font-bold tracking-wide uppercase text-gray-800">
-              Job <span className=" text-purple-500">inscription</span>
+            <span className="ml-2 mb-3 text-xl sm:text-2xl  font-bold tracking-wide uppercase text-gray-800">
+              Job <span className=" text-purple-500">Hunter</span>
             </span>
           </Link>
 
@@ -62,7 +58,7 @@ const Header = () => {
               title="Open Menu"
               onClick={() => setIsMenuOpen(true)}
             >
-              <Bars3BottomRightIcon className="w-5 text-gray-600" />
+              <Bars3Icon className="w-5 text-gray-600" />
             </button>
             {isMenuOpen && (
               <div className="absolute top-0 left-0 w-full z-10">
@@ -71,8 +67,8 @@ const Header = () => {
                   <div className="flex items-center justify-between mb-4">
                     <div>
                       <Link to="/">
-                        <span className="text-xl font-bold tracking-wide text-gray-800 uppercase">
-                          job inscription
+                        <span className="mb-6 text-xl font-bold tracking-wide text-gray-800 uppercase">
+                          job Hunter
                         </span>
                       </Link>
                     </div>
@@ -122,7 +118,7 @@ const Header = () => {
               </div>
             )}
           </div>
-          <button className="btnB ">Star Applying</button>
+          <button className="btn">Star Applying</button>
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ const AppliedJobs = () => {
   const datas = useLoaderData();
   const [findData, setFindData] = useState([]);
   const [jobData, setJobData] = useState([]);
-  console.log(jobData);
+
   useEffect(() => {
     const strodeData = getShoppingCart();
     let savedCart = [];
